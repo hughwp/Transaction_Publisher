@@ -20,14 +20,14 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'com.hughcode.App'
+        attributes 'Main-Class': 'com.hughcode.Main'
     }
 }
 
 shadowJar {
     archiveClassifier.set('')
     manifest {
-        attributes 'Main-Class': 'com.hughcode.App'
+        attributes 'Main-Class': 'com.hughcode.Main'
     }
 }
 
