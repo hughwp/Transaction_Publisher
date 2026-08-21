@@ -22,7 +22,7 @@ public class Main {
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
         server.createContext("/stream", exchange -> {
             exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
