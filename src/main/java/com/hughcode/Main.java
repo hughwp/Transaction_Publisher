@@ -40,10 +40,17 @@ public class Main {
                     Thread.sleep(1000);
                 }
             } catch (Exception e) {
-                logger.log(Level.SEVERE, "Stream error", e);
+                logger.log(Level.INFO, "Client disconnected", e);
+            } finally {
+                try {
+                    out.close();
+                    exchange.close();
+                } catch (Exception e) {
+                    logger.log(Level.SEVERE, "Error closing connection", e);
+                }
             }
         });
         server.start();
-        logger.info("Server started on port 8081");
+        logger.info("Server started on port 8080");
     }
 }
